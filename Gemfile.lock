@@ -3,7 +3,7 @@ PATH
   specs:
     live_assets (0.0.1)
       listen
-      rails (~> 4.1.6)
+      rails (~> 4.1.0)
 
 GEM
   remote: https://rubygems.org/

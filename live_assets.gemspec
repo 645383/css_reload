@@ -7,21 +7,19 @@ require "live_assets/version"
 Gem::Specification.new do |s|
   s.name        = "live_assets"
   s.version     = LiveAssets::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of LiveAssets."
-  s.description = "TODO: Description of LiveAssets."
+  s.authors     = ["Sergii Brytiuk"]
+  s.email       = ["brytiuk@ukr.net"]
+  s.homepage    = "https://github.com/645383/live_assets"
+  s.summary     = "No need to reload the page when css changed"
+  s.description = "Streaming changes in css"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 4.1.6"
+  s.add_dependency "rails", "~> 4.1.0"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "puma"
   s.add_dependency "listen"
-
-
 end
