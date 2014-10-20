@@ -17,6 +17,5 @@ module LiveAssets
         LiveAssets.start_timer :ping, 3
       end
     end
-
   end
 end
