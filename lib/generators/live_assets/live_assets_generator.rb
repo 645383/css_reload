@@ -8,6 +8,10 @@ class LiveAssetsGenerator < Rails::Generators::Base
   end
 
   def gsub_manifests
+    gsub_file 'app/assets/javascripts/application.js', /\/\= require.+/ do |match|
+      "#{match}\n//= require live_assets/live_assets"
+    end
+
     gsub_file 'app/views/layouts/application.html.erb', /javascript_include_tag.+/ do |match|
       "#{match}\n  <%= live_assets if Rails.env.development? %>"
     end
