@@ -16,7 +16,7 @@ class LiveAssetsGenerator < Rails::Generators::Base
       "#{match}\n\n  get 'live_assets/sse'"
     end
 
-    gsub_file 'config/application.rb', /(class Application < Rails::Application).+/ do |match|
+    gsub_file 'config/application.rb', /class\sApplication\s\<\sRails\:\:Application.+/ do |match|
       "#{match}\n    config.allow_concurrency = true"
     end
   end
