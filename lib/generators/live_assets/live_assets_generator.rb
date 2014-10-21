@@ -15,6 +15,10 @@ class LiveAssetsGenerator < Rails::Generators::Base
     gsub_file 'config/routes.rb', /\.application\.routes\.draw.+/ do |match|
       "#{match}\n\n  get 'live_assets/sse'"
     end
+
+    gsub_file 'config/application.rb', /(class Application < Rails::Application).+/ do |match|
+      "#{match}\n    config.allow_concurrency = true"
+    end
   end
 
   private
